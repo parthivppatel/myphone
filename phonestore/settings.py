@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -53,7 +54,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django_session_timeout.middleware.SessionTimeoutMiddleware',
 ]
 
 ROOT_URLCONF = 'phonestore.urls'
@@ -76,7 +76,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'phonestore.wsgi.application'
 
-#for expire session
 SESSION_EXPIRE_SECONDS = 86400*7
 SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
 SESSION_TIMEOUT_REDIRECT = 'session'
@@ -128,9 +127,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS=[
+STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -142,5 +144,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT= 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER=os.getenv("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD=os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD=os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_CHARSET = 'utf-8'
