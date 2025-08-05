@@ -32,7 +32,7 @@ A complete e-commerce web application for selling mobile phones, built with Djan
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/parthivppatel/myphone
    cd phonestore
    ```
 
@@ -258,13 +258,9 @@ This application uses traditional Django views (not REST API). All interactions 
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
 ## 👥 Authors
 
-- Your Name - Initial work
+- Your Name - Parthiv Patel
 
 ## 🙏 Acknowledgments
 
@@ -276,15 +272,6 @@ This project is licensed under the MIT License.
 
 For support and questions:
 - Create an issue in the repository
-- Contact: your-email@example.com
-
-## 🔄 Version History
-
-- **v1.0.0** - Initial release with basic e-commerce functionality
-- **v1.1.0** - Added email verification and password recovery
-- **v1.2.0** - Enhanced user profile management
-- **v1.3.0** - Improved cart and order management
-
----
+- Contact: parthivp800@gmail.com
 
 **Note**: This is a development version. For production use, ensure proper security configurations and database optimization. 
