@@ -260,7 +260,7 @@ This application uses traditional Django views (not REST API). All interactions 
 
 ## 👥 Authors
 
-- Your Name - Parthiv Patel
+- Parthiv Patel
 
 ## 🙏 Acknowledgments
 
